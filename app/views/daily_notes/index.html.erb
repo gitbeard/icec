@@ -1,0 +1,25 @@
+<h1>Listing daily_notes</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @daily_notes.each do |daily_note| %>
+  <tr>
+    <td><%= daily_note.date %></td>
+    <td><%= daily_note.note %></td>
+    <td><%= link_to 'Show', daily_note %></td>
+    <td><%= link_to 'Edit', edit_daily_note_path(daily_note) %></td>
+    <td><%= link_to 'Destroy', daily_note, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Daily note', new_daily_note_path %>

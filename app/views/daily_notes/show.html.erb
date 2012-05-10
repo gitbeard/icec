@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @daily_note.date %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @daily_note.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_daily_note_path(@daily_note) %> |
+<%= link_to 'Back', daily_notes_path %>

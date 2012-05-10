@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  child_id: 1
+  date: 2012-04-29 13:46:46
+  individual_message: MyText
+  cb1: false
+  cb2: false
+  cb3: false
+
+two:
+  child_id: 1
+  date: 2012-04-29 13:46:46
+  individual_message: MyText
+  cb1: false
+  cb2: false
+  cb3: false

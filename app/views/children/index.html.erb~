@@ -1,0 +1,39 @@
+<h1>Listing children</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Dob</th>
+    <th>Mom first</th>
+    <th>Dad first</th>
+    <th>Email mom</th>
+    <th>Email dad</th>
+    <th>Icec start</th>
+    <th>Icec end</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @children.each do |child| %>
+  <tr>
+    <td><%= child.first_name %></td>
+    <td><%= child.last_name %></td>
+    <td><%= child.dob %></td>
+    <td><%= child.mom_first %></td>
+    <td><%= child.dad_first %></td>
+    <td><%= child.email_mom %></td>
+    <td><%= child.email_dad %></td>
+    <td><%= child.icec_start %></td>
+    <td><%= child.icec_end %></td>
+    <td><%= link_to 'Show', child %></td>
+    <td><%= link_to 'Edit', edit_child_path(child) %></td>
+    <td><%= link_to 'Destroy', child, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Child', new_child_path %>

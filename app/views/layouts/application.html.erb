@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Icec</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= link_to 'Children', children_path %>
+<%= link_to 'Take Attendance', take_attendance_path %>
+<%= link_to 'Child Notes', indexnames_path %>
+<%= link_to 'Class Notes', daily_notes_path %>
+<%= link_to 'Email Messages', email_messages_path %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2012-05-02 23:04:10
+  child_id: 1
+  daily_note_id: 1
+  child_daily_id: 1
+  to_address: MyString
+  sent_time: 2012-05-02 23:04:10
+
+two:
+  date: 2012-05-02 23:04:10
+  child_id: 1
+  daily_note_id: 1
+  child_daily_id: 1
+  to_address: MyString
+  sent_time: 2012-05-02 23:04:10

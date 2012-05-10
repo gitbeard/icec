@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @child.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @child.last_name %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @child.dob %>
+</p>
+
+<p>
+  <b>Mom first:</b>
+  <%= @child.mom_first %>
+</p>
+
+<p>
+  <b>Dad first:</b>
+  <%= @child.dad_first %>
+</p>
+
+<p>
+  <b>Email mom:</b>
+  <%= @child.email_mom %>
+</p>
+
+<p>
+  <b>Email dad:</b>
+  <%= @child.email_dad %>
+</p>
+
+<p>
+  <b>Icec start:</b>
+  <%= @child.icec_start %>
+</p>
+
+<p>
+  <b>Icec end:</b>
+  <%= @child.icec_end %>
+</p>
+
+
+<%= link_to 'Edit', edit_child_path(@child) %> |
+<%= link_to 'Back', children_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Child:</b>
+  <%= @child_daily.child_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @child_daily.date %>
+</p>
+
+<p>
+  <b>Individual message:</b>
+  <%= @child_daily.individual_message %>
+</p>
+
+<p>
+  <b>Cb1:</b>
+  <%= @child_daily.cb1 %>
+</p>
+
+<p>
+  <b>Cb2:</b>
+  <%= @child_daily.cb2 %>
+</p>
+
+<p>
+  <b>Cb3:</b>
+  <%= @child_daily.cb3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_child_daily_path(@child_daily) %> |
+<%= link_to 'Back', child_dailies_path %>

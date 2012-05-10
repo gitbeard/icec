@@ -1,0 +1,34 @@
+<h1>Listing child_dailies</h1>
+
+<table>
+  <tr>
+    <th>Child ID</th>
+    <th>Date</th>
+    <th>Individual message</th>
+    <th>Cb1</th>
+    <th>Cb2</th>
+    <th>Cb3</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @child_dailies.each do |child_daily| %>
+  <tr>
+    <td><%= child_daily.child_id %></td>
+    <td><%= child_daily.date %></td>
+    <td><%= child_daily.individual_message %></td>
+    <td><%= child_daily.cb1 %></td>
+    <td><%= child_daily.cb2 %></td>
+    <td><%= child_daily.cb3 %></td>
+    <td><%= link_to 'Show', child_daily %></td>
+    <td><%= link_to 'Edit', edit_child_daily_path(child_daily) %></td>
+    <td><%= link_to 'Destroy', child_daily, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New Child daily', new_child_daily_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@child_daily) do |f| %>
+  <% if @child_daily.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@child_daily.errors.count, "error") %> prohibited this child_daily from being saved:</h2>
+
+      <ul>
+      <% @child_daily.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :child_id %><br />
+    <%= f.number_field :child_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :individual_message %><br />
+    <%= f.text_area :individual_message %>
+  </div>
+  <div class="field">
+    <%= f.label :cb1 %><br />
+    <%= f.check_box :cb1 %>
+  </div>
+  <div class="field">
+    <%= f.label :cb2 %><br />
+    <%= f.check_box :cb2 %>
+  </div>
+  <div class="field">
+    <%= f.label :cb3 %><br />
+    <%= f.check_box :cb3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

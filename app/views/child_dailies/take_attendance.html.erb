@@ -1,0 +1,19 @@
+<h1>Take Attendance</h1>
+<p>Today is <%= Date.today %><p>
+<p>Please select the children who are here today.<p>
+<% kids = Hash.new() %>
+<%= form_tag("roll_call", :method => "post") do %>
+
+  <% @children.each do |child| %>
+
+    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
+    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
+    <%= hidden_field_tag "attendance[#{child.id}][date]", Date.today %>
+    <br />
+  <% end %>
+
+
+<br />
+  <%= submit_tag("Roll Call") %>
+<% end %>
+

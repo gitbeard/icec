@@ -1,0 +1,11 @@
+<h1>Generate Emails Page</h1>
+
+<%= emails %>
+
+<% @child_daily.each do |child_daily| %>
+  <%= child_daily.id %>
+<% end %>
+
+<% @daily_notes.each do |daily_note| %>
+  <%= daily_note.id %>
+<% end %>

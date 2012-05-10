@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @email_message.date %>
+</p>
+
+<p>
+  <b>Child:</b>
+  <%= @email_message.child_id %>
+</p>
+
+<p>
+  <b>Daily note:</b>
+  <%= @email_message.daily_note_id %>
+</p>
+
+<p>
+  <b>Child daily:</b>
+  <%= @email_message.child_daily_id %>
+</p>
+
+<p>
+  <b>To address:</b>
+  <%= @email_message.to_address %>
+</p>
+
+<p>
+  <b>Sent time:</b>
+  <%= @email_message.sent_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_message_path(@email_message) %> |
+<%= link_to 'Back', email_messages_path %>

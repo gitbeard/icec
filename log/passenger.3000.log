@@ -1,0 +1,83 @@
+[ pid=14472 thr=3070225264 file=ext/nginx/HelperAgent.cpp:923 time=2012-04-29 13:38:25.996 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=17119 thr=3067562864 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-01 22:19:41.420 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+#<Child:0xb802e50>
+#<Child:0xb802b58>
+#<Child:0xb802860>
+#<Child:0xb802568>
+#<Child:0xb802270>
+#<Child:0xb801f78>
+[#<Child id: 2, first_name: "jimmy", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:11:00", icec_end: "2012-04-28 08:11:00", created_at: "2012-04-28 08:11:17", updated_at: "2012-04-28 08:11:17">, #<Child id: 3, first_name: "coley", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:12:00", icec_end: "2012-04-28 08:12:00", created_at: "2012-04-28 08:12:37", updated_at: "2012-04-28 08:12:37">, #<Child id: 5, first_name: "Jacob", last_name: "Braun", dob: "2012-04-28", mom_first: "Amy", dad_first: "Jeff", email_mom: "Amy@gmail.com", email_dad: "Jeff@gmail.com", icec_start: "2007-05-28 23:52:00", icec_end: "2012-04-28 23:52:00", created_at: "2012-04-28 23:54:00", updated_at: "2012-04-28 23:54:00">, #<Child id: 16, first_name: "Julie", last_name: "Waterman", dob: "2012-04-29", mom_first: "Mom", dad_first: "Dad", email_mom: "", email_dad: "", icec_start: "2012-04-29 07:45:00", icec_end: "2012-04-29 07:45:00", created_at: "2012-04-29 07:45:26", updated_at: "2012-04-29 07:45:26">, #<Child id: 17, first_name: "Lacey", last_name: "Braun", dob: "2012-04-29", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-29 20:39:00", icec_end: "2012-04-29 20:39:00", created_at: "2012-04-29 20:39:26", updated_at: "2012-04-29 20:39:26">, #<Child id: 18, first_name: "Ruby", last_name: "Weeks", dob: "2012-04-30", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-30 16:07:00", icec_end: "2012-04-30 16:07:00", created_at: "2012-04-30 16:07:44", updated_at: "2012-04-30 16:07:44">]
+[#<Child id: 2, first_name: "jimmy", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:11:00", icec_end: "2012-04-28 08:11:00", created_at: "2012-04-28 08:11:17", updated_at: "2012-04-28 08:11:17">, #<Child id: 3, first_name: "coley", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:12:00", icec_end: "2012-04-28 08:12:00", created_at: "2012-04-28 08:12:37", updated_at: "2012-04-28 08:12:37">, #<Child id: 5, first_name: "Jacob", last_name: "Braun", dob: "2012-04-28", mom_first: "Amy", dad_first: "Jeff", email_mom: "Amy@gmail.com", email_dad: "Jeff@gmail.com", icec_start: "2007-05-28 23:52:00", icec_end: "2012-04-28 23:52:00", created_at: "2012-04-28 23:54:00", updated_at: "2012-04-28 23:54:00">, #<Child id: 16, first_name: "Julie", last_name: "Waterman", dob: "2012-04-29", mom_first: "Mom", dad_first: "Dad", email_mom: "", email_dad: "", icec_start: "2012-04-29 07:45:00", icec_end: "2012-04-29 07:45:00", created_at: "2012-04-29 07:45:26", updated_at: "2012-04-29 07:45:26">, #<Child id: 17, first_name: "Lacey", last_name: "Braun", dob: "2012-04-29", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-29 20:39:00", icec_end: "2012-04-29 20:39:00", created_at: "2012-04-29 20:39:26", updated_at: "2012-04-29 20:39:26">, #<Child id: 18, first_name: "Ruby", last_name: "Weeks", dob: "2012-04-30", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-30 16:07:00", icec_end: "2012-04-30 16:07:00", created_at: "2012-04-30 16:07:44", updated_at: "2012-04-30 16:07:44">]
+#<Enumerator:0xb856e10>
+#<Enumerator:0xb982cd0>
+#<Enumerator:0xbacbd1c>
+#<Enumerator:0xbad6a00>
+#<Enumerator:0xbad3d8c>
+#<Enumerator:0xb299cfc>
+#<Enumerator:0xb2a6cb8>
+#<Enumerator:0xb2a3dec>
+#<Enumerator:0xb9852f0>
+#<Enumerator:0xa59e9a8>
+#<Enumerator:0xa97c070>
+[#<Child id: 2, first_name: "jimmy", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:11:00", icec_end: "2012-04-28 08:11:00", created_at: "2012-04-28 08:11:17", updated_at: "2012-04-28 08:11:17">, #<Child id: 3, first_name: "coley", last_name: "", dob: "2012-04-28", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-28 08:12:00", icec_end: "2012-04-28 08:12:00", created_at: "2012-04-28 08:12:37", updated_at: "2012-04-28 08:12:37">, #<Child id: 5, first_name: "Jacob", last_name: "Braun", dob: "2012-04-28", mom_first: "Amy", dad_first: "Jeff", email_mom: "Amy@gmail.com", email_dad: "Jeff@gmail.com", icec_start: "2007-05-28 23:52:00", icec_end: "2012-04-28 23:52:00", created_at: "2012-04-28 23:54:00", updated_at: "2012-04-28 23:54:00">, #<Child id: 16, first_name: "Julie", last_name: "Waterman", dob: "2012-04-29", mom_first: "Mom", dad_first: "Dad", email_mom: "", email_dad: "", icec_start: "2012-04-29 07:45:00", icec_end: "2012-04-29 07:45:00", created_at: "2012-04-29 07:45:26", updated_at: "2012-04-29 07:45:26">, #<Child id: 17, first_name: "Lacey", last_name: "Braun", dob: "2012-04-29", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-29 20:39:00", icec_end: "2012-04-29 20:39:00", created_at: "2012-04-29 20:39:26", updated_at: "2012-04-29 20:39:26">, #<Child id: 18, first_name: "Ruby", last_name: "Weeks", dob: "2012-04-30", mom_first: "", dad_first: "", email_mom: "", email_dad: "", icec_start: "2012-04-30 16:07:00", icec_end: "2012-04-30 16:07:00", created_at: "2012-04-30 16:07:44", updated_at: "2012-04-30 16:07:44">]
+#<Enumerator:0xb84b218>
+#<Enumerator:0xb847cf8>
+#<Enumerator:0xb854250>
+#<Enumerator:0xb983838>
+#<Enumerator:0xbacc870>
+#<Enumerator:0xbac9b98>
+#<Enumerator:0xbad4930>
+#<Enumerator:0xb29a634>
+#<Enumerator:0xb2a758c>
+#<Enumerator:0xb2a465c>
+#<Enumerator:0xb40882c>
+#<Enumerator:0xb091d9c>
+#<Enumerator:0xab64a7c>
+#<Enumerator:0xad70adc>
+#<Enumerator:0xb009b18>
+#<Enumerator:0xa8c1694>
+#<Enumerator:0xb15650c>
+#<Enumerator:0xb1c2bd0>
+#<Enumerator:0xb0583bc>
+#<Enumerator:0xb686ba8>
+#<Enumerator:0xb51da8c>
+#<Enumerator:0xacf0328>
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+jimmy
+[ pid=17119 thr=3068967792 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-01 23:52:52.733 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=11751 thr=3070184304 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-01 23:55:30.721 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+3
+16
+2
+2
+2
+2
+3
+16
+3
+5
+16
+17
+[ pid=16164 thr=3069791088 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-06 23:31:10.302 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=16164 thr=3065777008 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-08 22:03:00.903 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+[ pid=16164 thr=3069791088 file=ext/nginx/HelperAgent.cpp:923 time=2012-05-09 08:40:56.96 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.

@@ -1,0 +1,2 @@
+module ChildDailiesHelper
+end

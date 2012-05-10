@@ -1,0 +1,25 @@
+<%= form_for(@daily_note) do |f| %>
+  <% if @daily_note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daily_note.errors.count, "error") %> prohibited this daily_note from being saved:</h2>
+
+      <ul>
+      <% @daily_note.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+class UserMailer < ActionMailer::Base
+  default from: "from@example.com"
+
+  def welcome_email(user)
+    @user = user
+    @url = "http://example.com/login"
+    mail(:to => user.email, :subject => "Welcome to My Awesome Site")
+  end
+
+  def new_child_email(child)
+    @child = child
+    mail(:to => "coleygilbreath@gmail.com", :subject => "New kid on the block!")
+  end
+
+  def child_daily_email(email_parts)
+    @email_parts = email_parts
+    @child = Child.find(email_parts["child_id"])
+    mail(:to => "jimmygilbreath@gmail.com", :subject => "Daily email for" + @child.first_name)
+  end
+end

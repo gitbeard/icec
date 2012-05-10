@@ -1,0 +1,3 @@
+class DailyNote < ActiveRecord::Base
+  attr_accessible :date, :note
+end
