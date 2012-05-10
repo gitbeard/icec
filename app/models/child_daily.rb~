@@ -1,3 +1,0 @@
-class ChildDaily < ActiveRecord::Base
-  attr_accessible :cb1, :cb2, :cb3, :child_id, :date, :individual_message
-end

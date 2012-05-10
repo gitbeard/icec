@@ -1,3 +1,0 @@
-class EmailMessage < ActiveRecord::Base
-  attr_accessible :child_daily_id, :child_id, :daily_note_id, :date, :sent_time, :to_address
-end

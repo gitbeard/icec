@@ -1,9 +1,0 @@
-class RenameKidTable < ActiveRecord::Migration
-  def up
-    rename_table :kid, :child
-  end
-
-  def down
-    rename_table :child, :kid
-  end
-end
