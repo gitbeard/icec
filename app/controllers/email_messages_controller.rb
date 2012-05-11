@@ -81,6 +81,22 @@ class EmailMessagesController < ApplicationController
     end
   end
 
+  # GET /preview_email/1
+  # GET /preview_email/1.json
+  def preview_email
+    @email_message = EmailMessage.find(params[:id])
+    @child = Child.find(@email_message.child_id)
+    @child_daily = ChildDaily.find(@email_message.child_daily_id)
+    @daily_note = DailyNote.find(@email_message.daily_note_id)
+    
+
+    respond_to do |format|
+      format.html # preview_email.html.erb
+      format.json { render json: @email_message }
+    end
+  end
+
+
   # Generate emails
   def generate_emails
     email_parts = Hash.new()

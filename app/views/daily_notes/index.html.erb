@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Date</th>
     <th>Note</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @daily_notes.each do |daily_note| %>
   <tr>
+    <td><%= daily_note.id %></td>
     <td><%= daily_note.date %></td>
     <td><%= daily_note.note %></td>
     <td><%= link_to 'Show', daily_note %></td>

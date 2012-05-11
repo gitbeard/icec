@@ -1,41 +1,57 @@
 <h1>Preview Email</h1>
+<%
+=begin
+%>
+<%= debug params %>
+<%= debug @email_message %>
+<%= debug @child %>
+<%= debug @child_daily %>
+<%= debug @daily_note %>
+<%
+=end
+%>
 
-<table>
-  <tr>
-    <th>Child ID</th>
-    <th>Child Name</th>
-    <th>Date</th>
-    <th>Individual message</th>
-    <th>Cb1</th>
-    <th>Cb2</th>
-    <th>Cb3</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @child_dailies.each do |child_daily| %>
-  <tr>
-    <td><%= child_daily.child_id %></td>
-    <% if(child_daily.child_id != nil) %>
-      <% @child = @children.find(child_daily.child_id) %>
-      <td><%= @child.first_name %></td>
-    <% else %>
-      <td></td>
-    <% end %>
-    <td><%= child_daily.date %></td>
-    <td><%= child_daily.individual_message %></td>
-    <td><%= child_daily.cb1 %></td>
-    <td><%= child_daily.cb2 %></td>
-    <td><%= child_daily.cb3 %></td>
-    <td><%= link_to 'Show', child_daily %></td>
-    <td><%= link_to 'Edit', edit_child_daily_path(child_daily) %></td>
-    <td><%= link_to 'Destroy', child_daily, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-
+<p>
+<%= "This email is for: " + @child.first_name.capitalize %>
 <br />
+<%= "This email is addressed to: " + @email_message.to_address %>
+</p>
 
+<p>
+<% if(@child.mom_first == '')%>
+  <% if(@child.dad_first == '')%>
+    <%= "Hello!" %>
+  <% else %>
+    <%= "Hello " + @child.dad_first.capitalize + "!" %>
+  <% end %>
+
+<% else %>
+  <% if(@child.dad_first == '')%>
+    <%= "Hello " + @child.mom_first.capitalize + "!" %>
+  <% else %>
+    <%= "Hello " + @child.mom_first.capitalize + " and " + @child.dad_first.capitalize + "!" %>
+  <% end %>  
+<% end %>
+</p>
+
+<!--# Daily note for the class. -->
+<p><%= @daily_note.note %></p>
+
+<p><%= simple_format("Individual note for " + @child.first_name.capitalize + ": \n" + @child_daily.individual_message) %></p>
+
+
+
+<%
+=begin
+%>
+<%= @email_message.sent_time %>
+<% if(@email_message.sent_time == ActiveSupport::TimeZone['UTC'].parse("9999-12-31")) %>
+  <%= "This email has not been sent yet."%>
+<% else %>
+  <%= "This email was sent at " + @email_message.sent_time %>
+<% end %>
+
+<%
+=end
+%>
 <%= link_to 'New Child daily', new_child_daily_path %>

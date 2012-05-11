@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+  	<th>ID</th>
     <th>Child ID</th>
     <th>Child Name</th>
     <th>Date</th>
@@ -16,6 +17,7 @@
 
 <% @child_dailies.each do |child_daily| %>
   <tr>
+    <td><%= child_daily.id %></td>
     <td><%= child_daily.child_id %></td>
     <% if(child_daily.child_id != nil) %>
       <% @child = @children.find(child_daily.child_id) %>

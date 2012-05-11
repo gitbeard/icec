@@ -2,7 +2,9 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Date</th>
+    <th>Child ID</th>
     <th>Child</th>
     <th>Daily note</th>
     <th>Child daily</th>
@@ -16,8 +18,15 @@
 
 <% @email_messages.each do |email_message| %>
   <tr>
+    <td><%= email_message.id %></td>
     <td><%= email_message.date %></td>
     <td><%= email_message.child_id %></td>
+    <% if(email_message.child_id != nil) %>
+      <% @child = Child.find(email_message.child_id) %>
+      <td><%= @child.first_name %></td>
+    <% else %>
+      <td></td>
+    <% end %>
     <td><%= email_message.daily_note_id %></td>
     <td><%= email_message.child_daily_id %></td>
     <td><%= email_message.to_address %></td>
@@ -25,7 +34,7 @@
     <td><%= link_to 'Show', email_message %></td>
     <td><%= link_to 'Edit', edit_email_message_path(email_message) %></td>
     <td><%= link_to 'Destroy', email_message, confirm: 'Are you sure?', method: :delete %></td>
-    <td><%= link_to 'View Email', view_email_path%></td>
+    <td><%= link_to 'View Email', preview_email_email_message_path(email_message) %></td>
   </tr>
 <% end %>
 </table>

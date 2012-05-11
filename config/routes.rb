@@ -1,5 +1,7 @@
 Icec::Application.routes.draw do
-  resources :email_messages
+  resources :email_messages do
+    get :preview_email, on: :member
+  end
 
   resources :daily_notes
 
@@ -11,7 +13,10 @@ Icec::Application.routes.draw do
   match 'roll_call' => 'child_dailies#roll_call'
   match 'indexnames' => 'child_dailies#indexnames'
   match 'generate_emails' => 'email_messages#generate_emails'
+  #get 'preview_email' => 'email_messages#preview_email'   # This worked but I wasn't passing param ?
 
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
