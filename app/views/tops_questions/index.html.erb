@@ -2,8 +2,10 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Description</th>
-    <th>Qualifier type</th>
+    <th>Qualifier Type</th>
+    <th>Qualifier Type Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +13,15 @@
 
 <% @tops_questions.each do |tops_question| %>
   <tr>
+    <td><%= tops_question.id %></td>
     <td><%= tops_question.description %></td>
     <td><%= tops_question.qualifier_type_id %></td>
+    <% if(tops_question.qualifier_type_id != nil) %>
+      <% @qualifier = TopsQualifier.find(:all, :conditions => { :type_id => tops_question.qualifier_type_id, :value_id => 2}) %>
+      <td><%= @qualifier.first.value_name %></td>
+    <% else %>
+      <td></td>
+    <% end %>
     <td><%= link_to 'Show', tops_question %></td>
     <td><%= link_to 'Edit', edit_tops_question_path(tops_question) %></td>
     <td><%= link_to 'Destroy', tops_question, confirm: 'Are you sure?', method: :delete %></td>

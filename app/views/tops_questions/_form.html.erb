@@ -15,9 +15,15 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+  
   <div class="field">
     <%= f.label :qualifier_type_id %><br />
-    <%= f.number_field :qualifier_type_id %>
+    <%= f.radio_button :qualifier_type_id, "0" %>
+    <%= label_tag :qualifier_type_id, "none" %><br />
+    <%= f.radio_button :qualifier_type_id, "1" %>
+    <%= label_tag "qualifier_type_id", "independently/with assistance" %><br />
+    <%= f.radio_button :qualifier_type_id, "2" %>
+    <%= label_tag "qualifier_type_id", "without prompting/with prompting" %><br />
   </div>
   <div class="actions">
     <%= f.submit %>

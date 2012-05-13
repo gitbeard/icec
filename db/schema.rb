@@ -11,20 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513025902) do
+ActiveRecord::Schema.define(:version => 20120513085320) do
 
   create_table "child_dailies", :force => true do |t|
     t.integer  "child_id"
     t.datetime "date"
     t.text     "individual_message"
-    t.boolean  "cb1"
-    t.boolean  "cb2"
-    t.boolean  "cb3"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "tops_form_id"
   end
 
   add_index "child_dailies", ["child_id"], :name => "index_child_dailies_on_child_id"
+  add_index "child_dailies", ["tops_form_id"], :name => "index_child_dailies_on_tops_form_id"
 
   create_table "children", :force => true do |t|
     t.string   "first_name"
@@ -71,6 +70,8 @@ ActiveRecord::Schema.define(:version => 20120513025902) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
+
+  add_index "tops_forms", ["tops_question_id"], :name => "index_tops_forms_on_tops_question_id"
 
   create_table "tops_qualifiers", :force => true do |t|
     t.integer  "type_id"

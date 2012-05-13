@@ -3,4 +3,6 @@ class ChildDaily < ActiveRecord::Base
   
   belongs_to :child
   belongs_to :email_message # May take this out.
+  
+  has_one :tops_form
 end

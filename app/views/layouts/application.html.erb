@@ -8,11 +8,20 @@
 </head>
 <body>
 
+<b>View: </b>
 <%= link_to 'Children', children_path %>
-<%= link_to 'Take Attendance', take_attendance_path %>
 <%= link_to 'Child Notes', indexnames_path %>
 <%= link_to 'Class Notes', daily_notes_path %>
 <%= link_to 'Email Messages', email_messages_path %>
+
+<br />
+<b>Action: </b>
+<%= link_to 'Take Attendance', take_attendance_path %>
+
+<br />
+<b>Tops Form:</b>
+<%= link_to 'Forms', tops_forms_path %>
+<%= link_to 'Questions', tops_questions_path %>
 
 <%= yield %>
 

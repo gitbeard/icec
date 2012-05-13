@@ -80,4 +80,14 @@ class TopsFormsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def tops_form
+    @questions = TopsQuestions.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @children }
+  end
+  
+  
 end
