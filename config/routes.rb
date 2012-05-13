@@ -1,4 +1,10 @@
 Icec::Application.routes.draw do
+  resources :tops_qualifiers
+
+  resources :tops_questions
+
+  resources :tops_forms
+
   resources :email_messages do
     get :preview_email, on: :member
   end

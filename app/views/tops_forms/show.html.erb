@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Child daily:</b>
+  <%= @tops_form.child_daily_id %>
+</p>
+
+<p>
+  <b>Tops question:</b>
+  <%= @tops_form.tops_question_id %>
+</p>
+
+<p>
+  <b>Checked:</b>
+  <%= @tops_form.checked %>
+</p>
+
+<p>
+  <b>Qualifier value:</b>
+  <%= @tops_form.qualifier_value_id %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @tops_form.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_tops_form_path(@tops_form) %> |
+<%= link_to 'Back', tops_forms_path %>

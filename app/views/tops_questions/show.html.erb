@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @tops_question.description %>
+</p>
+
+<p>
+  <b>Qualifier type:</b>
+  <%= @tops_question.qualifier_type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_tops_question_path(@tops_question) %> |
+<%= link_to 'Back', tops_questions_path %>

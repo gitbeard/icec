@@ -1,0 +1,25 @@
+<%= form_for(@tops_question) do |f| %>
+  <% if @tops_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tops_question.errors.count, "error") %> prohibited this tops_question from being saved:</h2>
+
+      <ul>
+      <% @tops_question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :qualifier_type_id %><br />
+    <%= f.number_field :qualifier_type_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

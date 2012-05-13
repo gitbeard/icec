@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506185153) do
+ActiveRecord::Schema.define(:version => 20120513025902) do
 
   create_table "child_dailies", :force => true do |t|
     t.integer  "child_id"
@@ -61,5 +61,30 @@ ActiveRecord::Schema.define(:version => 20120506185153) do
   add_index "email_messages", ["child_daily_id"], :name => "index_email_messages_on_child_daily_id"
   add_index "email_messages", ["child_id"], :name => "index_email_messages_on_child_id"
   add_index "email_messages", ["daily_note_id"], :name => "index_email_messages_on_daily_note_id"
+
+  create_table "tops_forms", :force => true do |t|
+    t.integer  "child_daily_id"
+    t.integer  "tops_question_id"
+    t.boolean  "checked"
+    t.integer  "qualifier_value_id"
+    t.text     "note"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "tops_qualifiers", :force => true do |t|
+    t.integer  "type_id"
+    t.integer  "value_id"
+    t.string   "value_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tops_questions", :force => true do |t|
+    t.text     "description"
+    t.integer  "qualifier_type_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
 end

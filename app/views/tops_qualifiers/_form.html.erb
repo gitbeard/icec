@@ -1,0 +1,29 @@
+<%= form_for(@tops_qualifier) do |f| %>
+  <% if @tops_qualifier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tops_qualifier.errors.count, "error") %> prohibited this tops_qualifier from being saved:</h2>
+
+      <ul>
+      <% @tops_qualifier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_id %><br />
+    <%= f.number_field :type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value_id %><br />
+    <%= f.number_field :value_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value_name %><br />
+    <%= f.text_field :value_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

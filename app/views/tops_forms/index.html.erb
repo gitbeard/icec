@@ -1,0 +1,31 @@
+<h1>Listing tops_forms</h1>
+
+<table>
+  <tr>
+    <th>Child daily</th>
+    <th>Tops question</th>
+    <th>Checked</th>
+    <th>Qualifier value</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tops_forms.each do |tops_form| %>
+  <tr>
+    <td><%= tops_form.child_daily_id %></td>
+    <td><%= tops_form.tops_question_id %></td>
+    <td><%= tops_form.checked %></td>
+    <td><%= tops_form.qualifier_value_id %></td>
+    <td><%= tops_form.note %></td>
+    <td><%= link_to 'Show', tops_form %></td>
+    <td><%= link_to 'Edit', edit_tops_form_path(tops_form) %></td>
+    <td><%= link_to 'Destroy', tops_form, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tops form', new_tops_form_path %>

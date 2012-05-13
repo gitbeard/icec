@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  child_daily_id: 1
+  tops_question_id: 1
+  checked: false
+  qualifier_value_id: 1
+  note: MyText
+
+two:
+  child_daily_id: 1
+  tops_question_id: 1
+  checked: false
+  qualifier_value_id: 1
+  note: MyText

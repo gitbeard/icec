@@ -1,0 +1,27 @@
+<h1>Listing tops_qualifiers</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Value</th>
+    <th>Value name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tops_qualifiers.each do |tops_qualifier| %>
+  <tr>
+    <td><%= tops_qualifier.type_id %></td>
+    <td><%= tops_qualifier.value_id %></td>
+    <td><%= tops_qualifier.value_name %></td>
+    <td><%= link_to 'Show', tops_qualifier %></td>
+    <td><%= link_to 'Edit', edit_tops_qualifier_path(tops_qualifier) %></td>
+    <td><%= link_to 'Destroy', tops_qualifier, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tops qualifier', new_tops_qualifier_path %>
