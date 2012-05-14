@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Child daily</th>
     <th>Tops question</th>
     <th>Checked</th>
@@ -14,6 +15,7 @@
 
 <% @tops_forms.each do |tops_form| %>
   <tr>
+    <td><%= tops_form.id %></td>
     <td><%= tops_form.child_daily_id %></td>
     <td><%= tops_form.tops_question_id %></td>
     <td><%= tops_form.checked %></td>

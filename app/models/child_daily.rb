@@ -1,8 +1,8 @@
 class ChildDaily < ActiveRecord::Base
-  attr_accessible :cb1, :cb2, :cb3, :child_id, :date, :individual_message
+  attr_accessible :child_id, :date, :individual_message
   
   belongs_to :child
   belongs_to :email_message # May take this out.
   
-  has_one :tops_form
+  has_many :tops_form
 end

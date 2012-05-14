@@ -7,7 +7,6 @@
     <th>Child Name</th>
     <th>Date</th>
     <th>Individual message</th>
-    <th>Tops Form ID</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,7 +24,6 @@
     <% end %>
     <td><%= child_daily.date %></td>
     <td><%= child_daily.individual_message %></td>
-    <td><%= child_daily.tops_form_id %></td>
     <td><%= link_to 'Show', child_daily %></td>
     <td><%= link_to 'Edit', edit_child_daily_path(child_daily) %></td>
     <td><%= link_to 'Destroy', child_daily, confirm: 'Are you sure?', method: :delete %></td>
