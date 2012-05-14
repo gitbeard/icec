@@ -1,40 +1,44 @@
 <h1>TOPS Report</h1>
 <p>Today is <%= Date.today %><p>
-<p>This is an individual TOPS report<p>
+<p><%= "This is an individual TOPS report for " + @child.first_name %><p>
 
-<% kids = Hash.new() %>
+<%# kids = Hash.new() %>
+
 <%= form_tag("tops_form", :method => "post") do %>
 
-  <% @tops_questions.each do |q| %>
+  <% @questions.each do |q| %>
 
-    #checkbox for this question_id
-    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
+    <%# checkbox for this question_id %>
+    <%= check_box_tag :question_id, q.id %>
     
-    #label for this checkbox (question description)
-    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
+    <%# label for this checkbox (question description) %>
+    <%= label_tag(:question_id, q.description) %>
     
-    #radio buttons for qualifier
-    <%= f.label :qualifier_type_id %><br />
-    <%= f.radio_button :qualifier_type_id, "0" %>
-    <%= label_tag :qualifier_type_id, "none" %><br />
-    <%= f.radio_button :qualifier_type_id, "1" %>
-    <%= label_tag "qualifier_type_id", "independently/with assistance" %><br />
-    <%= f.radio_button :qualifier_type_id, "2" %>
-    <%= label_tag "qualifier_type_id", "without prompting/with prompting" %><br />
+    <%# radio buttons for qualifier %>
+    <%# @qualifiers = TopsQualifier.find(:all q.qualifier_type_id) %>
+    <% @qualifiers = TopsQualifier.find(:all, :conditions => { :type_id => q.qualifier_type_id}) %>
     
-    #textbox for note
-	<%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <% @qualifiers.each do |qual| %>
+      <% if(qual.value_name == '') %>
+        <% @label_text = "none" %>
+        <% @checked = true %>
+      <% else %>
+        <% @label_text = qual.value_name %>
+        <% @checked = false %>
+      <% end %>
+      
+      <br />
+      <%= radio_button_tag q.id, qual.value_id, @checked %>
+      <%= label_tag q.id, @label_text %>
+    <% end %>
+    
+    <%# textbox for note %>
+    <br />
+	<%= label_tag :description, "Note" %><br />
+    <%= text_area_tag :description %>
 
-
-    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
-    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
-    <%= hidden_field_tag "attendance[#{child.id}][date]", Date.today %>
-
-
-    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
-    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
-    <%= hidden_field_tag "attendance[#{child.id}][date]", Date.today %>
+    
+    <br />
     <br />
   <% end %>
 

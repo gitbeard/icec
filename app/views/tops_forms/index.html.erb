@@ -11,6 +11,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @tops_forms.each do |tops_form| %>
@@ -24,6 +25,7 @@
     <td><%= link_to 'Show', tops_form %></td>
     <td><%= link_to 'Edit', edit_tops_form_path(tops_form) %></td>
     <td><%= link_to 'Destroy', tops_form, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'TOPS Form', tops_form_tops_form_path(tops_form) %></td>
   </tr>
 <% end %>
 </table>

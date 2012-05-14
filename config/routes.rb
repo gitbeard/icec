@@ -3,7 +3,10 @@ Icec::Application.routes.draw do
 
   resources :tops_questions
 
-  resources :tops_forms
+  resources :tops_forms do
+    get :tops_form, on: :member
+    post :tops_form, on: :member
+  end
 
   resources :email_messages do
     get :preview_email, on: :member
@@ -11,7 +14,9 @@ Icec::Application.routes.draw do
 
   resources :daily_notes
 
-  resources :child_dailies
+  resources :child_dailies do
+    resources :tops_forms #hmm not working for me
+  end
 
   resources :children
 
@@ -20,7 +25,7 @@ Icec::Application.routes.draw do
   match 'indexnames' => 'child_dailies#indexnames'
   match 'generate_emails' => 'email_messages#generate_emails'
   #get 'preview_email' => 'email_messages#preview_email'   # This worked but I wasn't passing param ?
-  match 'tops_form' => 'tops_forms#tops_form'
+  # match 'tops_form' => 'tops_forms#tops_form'
 
   
   # The priority is based upon order of creation:

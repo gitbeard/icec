@@ -18,7 +18,7 @@
   
   <div class="field">
     <%= f.label :qualifier_type_id %><br />
-    <%= f.radio_button :qualifier_type_id, "0" %>
+    <%= f.radio_button :qualifier_type_id, "0", :checked => true %>
     <%= label_tag :qualifier_type_id, "none" %><br />
     <%= f.radio_button :qualifier_type_id, "1" %>
     <%= label_tag "qualifier_type_id", "independently/with assistance" %><br />

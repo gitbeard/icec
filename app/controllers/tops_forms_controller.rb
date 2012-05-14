@@ -82,8 +82,14 @@ class TopsFormsController < ApplicationController
   end
   
   def tops_form
-    @questions = TopsQuestions.all
-
+    @tops_form = TopsForm.find(params[:id])
+    #@questions = TopsQuestion.find(@tops_form.tops_question_id)
+    #@child_dailies = ChildDailies.all
+    @child_daily = ChildDaily.find(@tops_form.child_daily_id)
+    @child = Child.find(@child_daily.child_id)
+    @questions = TopsQuestion.all
+    @qualifiers = TopsQualifier.all
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @children }
