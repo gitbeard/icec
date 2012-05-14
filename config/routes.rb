@@ -20,7 +20,7 @@ Icec::Application.routes.draw do
   match 'indexnames' => 'child_dailies#indexnames'
   match 'generate_emails' => 'email_messages#generate_emails'
   #get 'preview_email' => 'email_messages#preview_email'   # This worked but I wasn't passing param ?
-
+  match 'tops_form' => 'tops_forms#tops_form'
 
   
   # The priority is based upon order of creation:

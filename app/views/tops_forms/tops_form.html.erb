@@ -1,0 +1,44 @@
+<h1>TOPS Report</h1>
+<p>Today is <%= Date.today %><p>
+<p>This is an individual TOPS report<p>
+
+<% kids = Hash.new() %>
+<%= form_tag("tops_form", :method => "post") do %>
+
+  <% @tops_questions.each do |q| %>
+
+    #checkbox for this question_id
+    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
+    
+    #label for this checkbox (question description)
+    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
+    
+    #radio buttons for qualifier
+    <%= f.label :qualifier_type_id %><br />
+    <%= f.radio_button :qualifier_type_id, "0" %>
+    <%= label_tag :qualifier_type_id, "none" %><br />
+    <%= f.radio_button :qualifier_type_id, "1" %>
+    <%= label_tag "qualifier_type_id", "independently/with assistance" %><br />
+    <%= f.radio_button :qualifier_type_id, "2" %>
+    <%= label_tag "qualifier_type_id", "without prompting/with prompting" %><br />
+    
+    #textbox for note
+	<%= f.label :description %><br />
+    <%= f.text_area :description %>
+
+
+    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
+    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
+    <%= hidden_field_tag "attendance[#{child.id}][date]", Date.today %>
+
+
+    <%= check_box_tag "attendance[#{child.id}][child_id]", child.id %>
+    <%= label_tag(:attendance, child.first_name + " " + child.last_name) %>
+    <%= hidden_field_tag "attendance[#{child.id}][date]", Date.today %>
+    <br />
+  <% end %>
+
+
+<br />
+  <%= submit_tag("Save Report") %>
+<% end %>
