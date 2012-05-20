@@ -5,9 +5,11 @@ Icec::Application.routes.draw do
 
   resources :tops_forms do
     get :tops_form, on: :member
+    get :tops_form2, on: :member
     post :tops_form, on: :member
+    post :tops_form2, on: :member
   end
-
+  
   resources :email_messages do
     get :preview_email, on: :member
   end
@@ -16,6 +18,8 @@ Icec::Application.routes.draw do
 
   resources :child_dailies do
     resources :tops_forms #hmm not working for me
+    get :tops_report, on: :member
+    post :tops_report, on: :member
   end
 
   resources :children

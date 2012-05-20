@@ -12,6 +12,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
     
   </tr>
 
@@ -32,6 +33,7 @@
     <td><%= link_to 'Destroy', child_daily, confirm: 'Are you sure?', method: :delete %></td>
     <!-- <td><%# link_to 'TOPS Form', tops_form_tops_form_path(tops_form) %></td> -->
     <td><%= link_to 'TOPS Form', child_daily_tops_forms_path(child_daily) %></td>
+    <td><%= link_to 'TOPS Report', tops_report_child_daily_path(child_daily) %></td>
     <td><%# link_to 'Show TOPS Form', child_daily_tops_form_path(child_daily) %></td>
   </tr>
 <% end %>

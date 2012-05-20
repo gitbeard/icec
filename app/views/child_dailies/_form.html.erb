@@ -23,6 +23,16 @@
     <%= f.label :individual_message %><br />
     <%= f.text_area :individual_message %>
   </div>
+  
+  
+  
+  <%= f.fields_for :tops_form do |t| %>
+    <div class="field">
+      <%= t.check_box :checked %>
+    </div>
+  <% end %>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>

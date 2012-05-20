@@ -1,0 +1,61 @@
+<h1>TOPS Report</h1>
+<p>Today is <%= Date.today %><p>
+
+<%= debug @tops_forms %>
+<%# debug @child %>
+
+
+<%= form_for(@child_daily) do |f| %>
+
+  <%# @tops_forms.each do |tf| %>
+  
+    <%= f.fields_for :tops_form do |builder| %>
+      <%= builder.check_box :checked %>
+    <% end %>
+  <%# end %>
+  <br />
+  <%= f.submit %>
+
+
+<% end %>
+
+<%
+=begin
+%>
+<%= form_for(@tops_form) do |f| %>
+  
+  <%= f.fields_for @child do |c| %>
+    <%= c.label :id %><br />
+    <p><%= c.check_box :id %></p>
+  <% end %>
+  
+  <%= f.fields_for @child_daily do |q| %>
+    <%= q.label :id %><br />
+    <p><%= q.number_field :id %></p>
+  <% end %>
+  
+  <% @questions.each do |q| %>
+    <%# debug q %>
+    <%= f.fields_for q do |x| %>
+      <p><%= x.label q.id %>
+      <%= x.check_box :id %></p>
+    <% end %>
+  
+  <% end %>
+  
+  
+<br />
+  <%= f.submit %>
+<% end %>
+
+
+
+
+
+
+<div class="field">
+    <%= f.check_box :question_id %>
+  </div>
+<%
+=end
+%>
