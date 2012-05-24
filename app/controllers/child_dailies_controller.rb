@@ -36,6 +36,8 @@ class ChildDailiesController < ApplicationController
   # GET /child_dailies/new.json
   def new
     @child_daily = ChildDaily.new(:tops_form => TopsForm.new)
+    #@child_daily.tops_form.build.build_tops_question
+    @child_daily.tops_form.tops_question
 
     respond_to do |format|
       format.html # new.html.erb
