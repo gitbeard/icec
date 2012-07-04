@@ -1,4 +1,6 @@
 Icec::Application.routes.draw do
+  resources :projects
+
   resources :tops_qualifiers
 
   resources :tops_questions

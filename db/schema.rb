@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513083841) do
+ActiveRecord::Schema.define(:version => 20120626052417) do
 
   create_table "child_dailies", :force => true do |t|
     t.integer  "child_id"
@@ -58,6 +58,21 @@ ActiveRecord::Schema.define(:version => 20120513083841) do
   add_index "email_messages", ["child_daily_id"], :name => "index_email_messages_on_child_daily_id"
   add_index "email_messages", ["child_id"], :name => "index_email_messages_on_child_id"
   add_index "email_messages", ["daily_note_id"], :name => "index_email_messages_on_daily_note_id"
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "description"
+    t.boolean  "done"
+    t.integer  "project_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "tops_forms", :force => true do |t|
     t.integer  "child_daily_id"

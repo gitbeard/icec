@@ -1,24 +1,63 @@
 <h1>TOPS Report</h1>
 <p>Today is <%= Date.today %><p>
+	
+<p> Today, <%= @child_daily.child.first_name.capitalize %>: </p> 
 
-<%= debug @tops_forms %>
-<%# debug @child %>
-
+<br />
 
 <%= form_for(@child_daily) do |f| %>
 
-  <%# @tops_forms.each do |tf| %>
-  
-    <%= f.fields_for :tops_form do |builder| %>
-      <%= builder.check_box :checked %>
-    <% end %>
-  <%# end %>
-  <br />
-  <%= f.submit %>
+	<table>
+	  <tr>
+	    <th>Question ID</th>
+	    <th></th>
+	    <th>Question Description</th>
+	    <th>Qualifier Type ID</th>
+	    <th>Note</th>
+	  </tr>
+	<% @child_daily.tops_questions.each do |tq| %>
+	  <tr>
+	  	<td>
+	      <%= tq.id %>
+	    </td>
+	    <td>
+	      <%= f.fields_for :tops_form do |tf_fields| %>
+	        <%= tf_fields.check_box :checked %>
+	      <% end %>
+	    </td>
+	    <td>
+	      <%= tq.description %>
+	    </td>
+	    <td>
+	      <%= f.fields_for :tops_form do |tf_fields| %>
+	        <%= tq.qualifier_type_id %>
+	        <%# debug tq.tops_qualifier %>
+	        <%= tf_fields.radio_button :qualifier_value_id, "with" %> with assistance 
+	        <%= tf_fields.radio_button :qualifier_value_id, "without" %> without assistance
+	      <% end %>
+	      <%# tq.qualifier_type_id %>
+	    </td>
+	    <td>
+	      <%= f.fields_for :tops_form do |builder| %>
+	        <%= builder.text_field :note %>
+	      <% end %>
+	    </td>
+	    
+	    
+	    
+	  
+	  
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+	<%= f.submit %>
 
 
 <% end %>
 
+<%= debug @tops_forms %>
 <%
 =begin
 %>

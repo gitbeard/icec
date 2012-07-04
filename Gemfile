@@ -25,6 +25,11 @@ end
 
 gem 'jquery-rails'
 
+# For creating forms easier, check out on GitHub
+gem 'formtastic'
+gem "cocoon"
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

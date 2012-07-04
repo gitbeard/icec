@@ -130,5 +130,12 @@ class ChildDailiesController < ApplicationController
     end
   end
 
+  def tops_form
+    # [@topsform1, @tops_form2]
+  end
+
+  def tops_form_attributes=(attributes)
+    # Process the attributes hash
+  end
 
 end

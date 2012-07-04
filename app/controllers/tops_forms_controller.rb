@@ -41,6 +41,9 @@ class TopsFormsController < ApplicationController
   # POST /tops_forms.json
   def create
     @tops_form = TopsForm.new(params[:tops_form])
+    @child_daily = ChildDaily.find(params[:tops_form][:question_id])
+    current_child_daily.questions(@child_daily)
+
 
     respond_to do |format|
       if @tops_form.save

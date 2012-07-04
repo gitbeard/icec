@@ -5,8 +5,15 @@ class ChildDaily < ActiveRecord::Base
   belongs_to :email_message # May take this out.
   
   has_one :tops_form
-  has_many :tops_questions, :through => :tops_forms, :foreign_key => :tops_question_id
+  #has_many :tops_questions, :through => :tops_forms, :foreign_key => :tops_question_id
+  has_many :tops_questions, :through => :tops_form, :foreign_key => :tops_question_id
   
   accepts_nested_attributes_for :tops_form
   accepts_nested_attributes_for :tops_questions
+  
+  def questions(tops_questions)
+    tops_forms.create(:tops_question_id => tops_questions.id)
+  end
+  
+  
 end
