@@ -26,5 +26,8 @@
     </div>     
     
   <h3> End of junk </h3>
+  <%= f.actions do %>
+    <%= f.action :submit, :button_html => { :disable_with => 'Please wait...'} %>
+  <% end %>
   <% end %>
 <% end %>
